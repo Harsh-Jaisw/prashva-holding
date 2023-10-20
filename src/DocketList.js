@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from "react";
 import "./DocketList.css";
 import { BiTimeFive } from "react-icons/bi";
-import {MdNumbers} from "react-icons/md"
+import { MdNumbers } from "react-icons/md";
 function DocketList() {
   const [docketList, setDocketList] = useState([]);
+  const Base_Url=process.env.SERVICE_URL
   useEffect(() => {
-    fetch("https://parshva-backend.onrender.com/api/getAllDocket")
+    fetch(process.env.NODE_ENV==="development"?"http://localhost:5000/api":Base_Url+"/getAllDocket")
       .then((res) => res.json())
       .then((data) => setDocketList(data.docketList));
   }, []);
-  document.title="All Docket"
+  document.title = "All Docket";
   return (
     <div class="cards">
       {docketList.map((item, i) => {
         return (
           <div className={`card card-${(i + 1) % 5}`} key={item._id}>
-            <div className="card__icon"><MdNumbers/> {item.PoNumber}</div>
+            <div className="card__icon">
+              <MdNumbers /> {item.PoNumber}
+            </div>
 
             <div className="card__icon">
               <BiTimeFive />

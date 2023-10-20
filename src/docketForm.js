@@ -13,8 +13,9 @@ function DocketForm() {
   const [supplierData, setSupplierData] = useState([]);
   const [purchaseOrderData, setPurchaseOrderData] = useState([]);
   const [docketList, setDocketList] = useState([]);
+  const Base_Url=process.env.SERVICE_URL
   useEffect(() => {
-    fetch("https://parshva-backend.onrender.com/api/data")
+    fetch(process.env.NODE_ENV==="development"?"http://localhost:5000/api":Base_Url+"/data")
       .then((res) => res.json())
       .then((data) => setSupplierData(data))
       .catch((err) => console.log(err));
@@ -65,7 +66,7 @@ function DocketForm() {
       headers: headers,
       body: JSON.stringify(docket), // If sending data in the request body
     };
-    fetch("https://parshva-backend.onrender.com/api/add-docket", requestOptions)
+    fetch(process.env.NODE_ENV==="development"?"http://localhost:5000/api":Base_Url+"/add-docket", requestOptions)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
