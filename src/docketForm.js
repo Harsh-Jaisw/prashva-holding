@@ -14,7 +14,7 @@ function DocketForm() {
   const [purchaseOrderData, setPurchaseOrderData] = useState([]);
   const [docketList, setDocketList] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/data")
+    fetch("https://parshva-backend.onrender.com/api/data")
       .then((res) => res.json())
       .then((data) => setSupplierData(data))
       .catch((err) => console.log(err));
@@ -34,7 +34,7 @@ function DocketForm() {
       ...formData,
       [id]: value,
     });
-    const filterPO = supplierData.filter((item) => item.supplier == value);
+    const filterPO = supplierData.filter((item) => item.supplier === value);
     setPurchaseOrderData(filterPO);
   };
   const handlePOChange = (event) => {
@@ -49,7 +49,7 @@ function DocketForm() {
 
     // Create a docket object
     const filterDescriptions = purchaseOrderData.filter(
-      (item) => item.description == formData.purchaseOrder
+      (item) => item.description === formData.purchaseOrder
     );
     const obj = { PoNumber: filterDescriptions[0].PoNumber,description:filterDescriptions[0].description };
     const docket = { ...formData, ...obj };
@@ -65,7 +65,7 @@ function DocketForm() {
       headers: headers,
       body: JSON.stringify(docket), // If sending data in the request body
     };
-    fetch("http://localhost:5000/api/add-docket", requestOptions)
+    fetch("https://parshva-backend.onrender.com/api/add-docket", requestOptions)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

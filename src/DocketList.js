@@ -5,7 +5,7 @@ import {MdNumbers} from "react-icons/md"
 function DocketList() {
   const [docketList, setDocketList] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/getAllDocket")
+    fetch("https://parshva-backend.onrender.com/api/getAllDocket")
       .then((res) => res.json())
       .then((data) => setDocketList(data.docketList));
   }, []);
