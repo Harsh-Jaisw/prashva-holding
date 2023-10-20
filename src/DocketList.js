@@ -4,7 +4,6 @@ import { BiTimeFive } from "react-icons/bi";
 import { MdNumbers } from "react-icons/md";
 function DocketList() {
   const [docketList, setDocketList] = useState([]);
-  const Base_Url=process.env.SERVICE_URL
   useEffect(() => {
     fetch("https://parshva-backend.onrender.com/apigetAllDocket")
       .then((res) => res.json())

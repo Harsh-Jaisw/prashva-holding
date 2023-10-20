@@ -13,7 +13,6 @@ function DocketForm() {
   const [supplierData, setSupplierData] = useState([]);
   const [purchaseOrderData, setPurchaseOrderData] = useState([]);
   const [docketList, setDocketList] = useState([]);
-  const Base_Url=process.env.SERVICE_URL
   useEffect(() => {
     fetch("https://parshva-backend.onrender.com/api/data")
       .then((res) => res.json())
