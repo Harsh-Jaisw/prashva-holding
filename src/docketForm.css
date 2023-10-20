@@ -1,0 +1,91 @@
+
+
+.contact-wrap {
+	padding: 15px;
+	max-width: 750px;
+	margin: 0 auto;
+}
+input,
+textarea 
+,select{
+	border: 0;
+    position: relative;
+    top: 8px;
+}
+[type="submit"] {
+	background: rgb(7, 160, 25);
+	color: rgb(237, 239, 244);
+	text-shadow: 1px 1px 1px black;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 12px 60px;
+	width: 100%;
+	cursor: pointer;
+}
+.zeile {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 2%;
+}
+.zeile .input-block {
+	flex: 1 0 200px;
+    border-radius: 5px;
+}
+
+.input-block {
+	background: white;
+	padding: 20px;
+    border-radius: 5px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.input-block textarea {
+	resize: none;
+	outline: none;
+}
+
+.input-block input,
+.input-block textarea ,.input-block select{
+	font-size: 1.1rem;
+	color: #333;
+	outline: none;
+	width: 100%;
+	background: transparent;
+	position: relative;
+	z-index: 2;
+}
+select{
+    width:100%;
+    height:100%;
+    position: relative;
+    top: 8px;
+    border:none;
+    outline:none;
+}
+.input-block label {
+	color: grey;
+	position: absolute;
+	left: 16px;
+	top: 8px;
+	z-index: 1;
+	font-size: .8rem;
+	transition: 0.3s;
+}
+
+input:placeholder-shown + label,
+textarea:placeholder-shown + label {
+	top: 16px;
+	font-size: 1.1rem;
+}
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+	top: 2px;
+	font-size: 0.8rem;
+}
+input:focus + label,
+textarea:focus + label ,select:focus + label{
+	top: 2px;
+	font-size: 0.8rem;
+}
