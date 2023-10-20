@@ -6,9 +6,10 @@ function DocketList() {
   const [docketList, setDocketList] = useState([]);
   const Base_Url=process.env.SERVICE_URL
   useEffect(() => {
-    fetch(process.env.NODE_ENV==="development"?"http://localhost:5000/api":Base_Url+"/getAllDocket")
+    fetch("https://parshva-backend.onrender.com/apigetAllDocket")
       .then((res) => res.json())
-      .then((data) => setDocketList(data.docketList));
+      .then((data) => setDocketList(data.docketList))
+      .catch((err)=>console.log(err))
   }, []);
   document.title = "All Docket";
   return (
