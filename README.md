@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+Docket Creation Form
+This project allows users to create a docket by entering specific information and selecting a supplier and purchase order from a CSV file. The docket will be stored and displayed in a list with the entered details.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Getting Started
+These instructions will help you set up and run the Docket Creation Form on your local machine.
 
-## Available Scripts
+Prerequisites
+Node.js: Make sure you have Node.js installed on your system. You can download it from here.
 
-In the project directory, you can run:
+Clone Repositry
 
-### `npm start`
+git clone https://github.com/Harsh-Jaisw/prashva-holding.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install the Node_Modules
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm install
 
-### `npm test`
+Start the App 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm start
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Usage
+Once the development server is running, open a web browser and go to https://6532528f816eb000089a024d--gorgeous-unicorn-196a7e.netlify.app/ to access the Docket Creation Form.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Fill in the form with the following information:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Name
+Start time
+End time
+No. of hours worked
+Rate per hour
+Supplier Name
+Purchase order
+To select a supplier, use the dropdown list provided. The supplier data is fetched from a CSV file.
 
-### `npm run eject`
+After selecting a supplier, the purchase order dropdown will populate with options filtered by the selected supplier.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+When you choose a purchase order, the form will display the PO Number and Description.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Click the "Submit" button to create a docket. The docket will be added to the list of dockets on the page, along with the entered information.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+And In the All Docket You can see your added dockets which are stored in the database.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank You 🚀
